@@ -1,0 +1,700 @@
+:root {
+    --primary-blue: #448aff;
+    --link-blue: #2962ff;
+    --dark-text: #333333;
+    --light-gray-bg: #f9f9f9;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --success-green: #4caf50;
+    --error-red: #f44336;
+}
+
+body {
+    font-family: 'Roboto', 'Inter', sans-serif;
+    background-color: var(--light-gray-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.main-header {
+    background: var(--white);
+    border-bottom: 3px solid #00bcd4;
+    padding: 0.5rem 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    border: 2px solid #2979ff;
+    color: #333;
+    font-weight: 900;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-box .search-icon {
+    color: #2979ff;
+}
+
+.top-nav {
+    display: flex;
+    gap: 2rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.top-nav a {
+    display: flex;
+    align-items: center;
+}
+
+.top-nav .arrow {
+    font-size: 1rem;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    width: 150px;
+}
+
+.search-btn-icon {
+    color: var(--primary-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.disclaimer-bar {
+    background: #f1f1f1;
+    font-size: 0.75rem;
+    color: #666;
+    padding: 0.2rem 0;
+}
+
+/* Page Layout */
+.page-wrapper {
+    background: var(--light-gray-bg);
+    padding: 2rem 0;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Main Column */
+.main-column {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sponsored-text {
+    grid-column: 1 / -1;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Blue Nav Bar */
+.blue-nav-bar {
+    display: flex;
+    border: 1px solid var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.blue-nav-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.blue-nav-bar a.middle {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.blue-nav-bar a:hover {
+    background: #e3f2fd;
+}
+
+.blue-nav-bar a.middle:hover {
+    background: #1565c0;
+}
+
+.sub-disclaimer {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Hero Image */
+.hero-image-container img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Typography */
+.intro-text {
+    font-size: 1.1rem;
+    color: #222;
+    margin-top: 1.5rem;
+}
+
+.section-heading {
+    text-align: center;
+    color: #333;
+    font-weight: 800;
+    margin: 2rem 0;
+}
+
+/* Highlight Box */
+.highlight-box {
+    background: #fff5f5;
+    border-left: 4px solid var(--error-red);
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* Two Col List */
+.two-col-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 600px) {
+    .two-col-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Lists */
+.bullet-list li {
+    margin-bottom: 0.5rem;
+}
+
+.blue-bullets li::marker {
+    color: var(--link-blue);
+}
+
+.red-bullets li::marker {
+    color: var(--error-red);
+}
+
+.check-list-large {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list-large li {
+    padding-left: 1.8rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.check-list-large li::before {
+    content: "✓";
+    color: var(--success-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Ingredients */
+.ingredient-item h3 {
+    color: var(--link-blue);
+    margin-bottom: 0.5rem;
+}
+
+.divider-small {
+    border: 0;
+    border-top: 1px dashed #eee;
+    margin: 1rem 0;
+}
+
+/* Warnings */
+.warning-box-styled {
+    background-color: #ffebee;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.warning-box-styled h3 {
+    color: #d32f2f;
+    margin-top: 0;
+}
+
+.safe-box {
+    background-color: #e8f5e9;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+}
+
+.safe-box h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+/* Tips */
+.big-number-list {
+    list-style: none;
+    counter-reset: my-counter;
+    padding: 0;
+}
+
+.big-number-list li {
+    counter-increment: my-counter;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.big-number-list li::before {
+    content: counter(my-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--primary-blue);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.sidebar-widget .widget-title {
+    background: #4285f4;
+    color: white;
+    margin: 0;
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.widget-content {
+    padding: 1.5rem;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.source-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.small-disclaimer {
+    font-size: 0.75rem;
+    color: #777;
+    line-height: 1.3;
+}
+
+/* Progress Circle */
+.read-time-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.progress-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(#ccc 0%, #ccc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progress-circle .inner-circle {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #777;
+}
+
+.read-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.read-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.read-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.widget-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
+}
+
+.sidebar-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.sidebar-checklist a {
+    text-decoration: underline;
+    color: #333;
+    font-weight: 500;
+}
+
+.check-icon {
+    color: var(--success-green);
+}
+
+.cross-icon {
+    color: var(--error-red);
+}
+
+/* Material Icons Helper */
+.material-icons {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Icon Images Sizing */
+.arrow img,
+.check-icon img,
+.cross-icon img {
+    height: 1em;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+/* Products */
+.product-card.featured {
+    border: 2px solid var(--primary-blue);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.product-header-featured {
+    background: #e3f2fd;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rank-circle {
+    background: var(--primary-blue);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Featured Product Specific Layout */
+.product-card.featured .product-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically for featured */
+    align-items: center;
+    /* Center align items */
+    gap: 1.5rem;
+}
+
+.product-card.featured .product-img-col {
+    flex: 0 0 auto;
+    /* Allow image container to size naturally */
+    width: 100%;
+    /* Full width container */
+    max-width: 300px;
+    /* Restrict max width of image */
+    display: flex;
+    justify-content: center;
+}
+
+.product-card.featured .product-img-col img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-card.featured .product-info-col {
+    width: 100%;
+    /* Ensure text column takes full width */
+}
+
+/* Standard Product Layout (Non-Featured) */
+.product-card:not(.featured) .product-body {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Standard Mobile Stack */
+@media (max-width: 700px) {
+    .product-card:not(.featured) .product-body {
+        flex-direction: column;
+    }
+}
+
+.product-card:not(.featured) .product-img-col {
+    flex: 0 0 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-card:not(.featured) .product-img-col img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-info-col {
+    flex: 1;
+}
+
+.product-card:not(.featured) {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.product-header-simple {
+    background: #f5f5f5;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.rank-small {
+    background: #555;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.grade-badge,
+.grade-small {
+    background: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.deal-box {
+    background: #fff8e1;
+    border: 1px solid #ffe082;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.highlight-price {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.cta-button.full-width {
+    display: block;
+    width: 100%;
+    /* Ensure padding doesn't cause overflow */
+    box-sizing: border-box;
+    background: #ff9100;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.cta-button.full-width:hover {
+    background: #f57c00;
+}
+
+.pros-cons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.pros h4 {
+    color: var(--success-green);
+    margin-bottom: 0.5rem;
+}
+
+.cons h4 {
+    color: var(--error-red);
+    margin-bottom: 0.5rem;
+}
+
+.pros ul,
+.cons ul {
+    padding-left: 1.2rem;
+}
+
+/* FAQ */
+details {
+    background: #f1f1f1;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #777;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.footer-links a {
+    margin: 0 0.5rem;
+    color: #555;
+}
