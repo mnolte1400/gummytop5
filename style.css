@@ -665,6 +665,8 @@ img {
 .cta-button.full-width {
     display: block;
     width: 100%;
+    /* Ensure padding doesn't cause overflow */
+    box-sizing: border-box;
     background: #ff9100;
     color: white;
     text-align: center;
