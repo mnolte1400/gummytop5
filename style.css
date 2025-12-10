@@ -112,6 +112,32 @@ a {
     padding: 0.2rem 0;
 }
 
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .top-nav {
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-bar input {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 /* Page Layout */
 .page-wrapper {
     background: var(--light-gray-bg);
@@ -631,8 +657,6 @@ a {
 .cta-button.full-width {
     display: block;
     width: 100%;
-    /* Ensure padding doesn't cause overflow */
-    box-sizing: border-box;
     background: #ff9100;
     color: white;
     text-align: center;
