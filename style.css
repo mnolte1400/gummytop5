@@ -728,7 +728,30 @@ footer {
     margin-top: 2rem;
 }
 
-.footer-links a {
-    margin: 0 0.5rem;
-    color: #555;
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding-top: 0.5rem;
+        /* Reduced from 2rem */
+    }
+
+    .main-column {
+        padding: 1.5rem 1rem;
+        /* Reduced padding */
+    }
+
+    .sponsored-text {
+        margin-bottom: 0.5rem;
+        /* Reduced from 1rem */
+        font-size: 0.8rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+        /* Reduced from 2.5rem */
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        margin-bottom: 1rem;
+    }
 }
