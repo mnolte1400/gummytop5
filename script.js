@@ -31,3 +31,22 @@ document.getElementById('search-input').addEventListener('keypress', function (e
         performSearch();
     }
 });
+
+// Capture and Forward fbclid
+document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const fbclid = urlParams.get('fbclid');
+
+    if (fbclid) {
+        const links = document.querySelectorAll('a[href*="totalt-clinic.com"]');
+        links.forEach(link => {
+            try {
+                const url = new URL(link.href);
+                url.searchParams.set('fbclid', fbclid);
+                link.href = url.toString();
+            } catch (e) {
+                console.error('Error modifying URL:', link.href, e);
+            }
+        });
+    }
+});
