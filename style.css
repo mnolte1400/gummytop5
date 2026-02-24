@@ -540,6 +540,7 @@ img {
     justify-content: center;
     font-weight: bold;
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 /* Featured Product Specific Layout */
@@ -633,6 +634,7 @@ img {
     justify-content: center;
     font-weight: bold;
     font-size: 0.9rem;
+    flex-shrink: 0;
 }
 
 .grade-badge,
