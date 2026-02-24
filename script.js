@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Popup Logic
 document.addEventListener('DOMContentLoaded', function () {
+    // START POPUP CONFIGURATION
+    const ENABLE_POPUP = false; // Set this to true to turn the popup back on
+    // END POPUP CONFIGURATION
+
+    if (!ENABLE_POPUP) return; // Exit immediately if popup is disabled
+
     const popup = document.getElementById('pdf-popup');
     const closeBtn = document.getElementById('close-popup');
     const targetSection = document.getElementById('product-1'); // Total T Gummy section
